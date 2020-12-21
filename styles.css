@@ -1,1 +1,93 @@
 /*Maak hier jouw CSS!*/
+.container {
+    display:grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 180px auto 50px;
+    grid-template-areas:
+            "header aside aside"
+            "content aside aside"
+            "content aside-small dynamische-aside"
+            "footer footer footer";
+}
+
+.container {
+    display:grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px;
+    grid-template-areas:
+            "header"
+            "dynamisch-aside"
+            "content"
+            "dynamische-aside"
+            "aside-small"
+            "footer";
+}
+
+.item {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#iteam-a {
+    grid-area: header;
+}
+
+#iteam-b {
+    grid-area: content;
+}
+
+#iteam-c {
+    grid-area: aside;
+}
+
+#iteam-d {
+    grid-area: dynamische-aside;
+}
+
+#iteam-e {
+    grid-area: aside-small;
+}
+
+#iteam-f {
+    grid-area: footer;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 180px auto 50px;
+    grid-template-areas:
+            "header aside aside"
+            "content aside aside"
+            "content aside-small dynamische-aside"
+            "footer footer footer";
+}
+
+@media screen and (min-width: 1024px) {
+     .container {
+         display: grid;
+         row-gap: 20px;
+         column-gap: 20px;
+         grid-template-columns: 1fr;
+         grid-template-rows: 50px auto 50px 50px 50px 50px;
+         grid-template-areas:
+            "header"
+            "dynamisch-aside"
+            "content"
+            "dynamische-aside"
+            "aside-small"
+            "footer";
+     }
+
+
+
